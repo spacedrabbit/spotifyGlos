@@ -16,6 +16,7 @@
 		B10C548A1A041F7F00A92E62 /* spotifyGlosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C54891A041F7F00A92E62 /* spotifyGlosTests.m */; };
 		B10C54951A044D9D00A92E62 /* JSLSonosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C54941A044D9D00A92E62 /* JSLSonosViewController.m */; };
 		B10C54981A044EB800A92E62 /* UIView+FrameGetters.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C54971A044EB800A92E62 /* UIView+FrameGetters.m */; };
+		B1C53CB01A070D9B00BEC2E4 /* ele-earth-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53CAF1A070D9B00BEC2E4 /* ele-earth-icon.png */; };
 		BD35218FFCB7D1354A2552D8 /* libPods-spotifyGlos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5F2E688A1B134E904E5383 /* libPods-spotifyGlos.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		B10C54941A044D9D00A92E62 /* JSLSonosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLSonosViewController.m; sourceTree = "<group>"; };
 		B10C54961A044EB800A92E62 /* UIView+FrameGetters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameGetters.h"; sourceTree = "<group>"; };
 		B10C54971A044EB800A92E62 /* UIView+FrameGetters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameGetters.m"; sourceTree = "<group>"; };
+		B1C53CAF1A070D9B00BEC2E4 /* ele-earth-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ele-earth-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		B10C546C1A041F7F00A92E62 /* spotifyGlos */ = {
 			isa = PBXGroup;
 			children = (
+				B1C53CAF1A070D9B00BEC2E4 /* ele-earth-icon.png */,
 				B10C54711A041F7F00A92E62 /* AppDelegate.h */,
 				B10C54721A041F7F00A92E62 /* AppDelegate.m */,
 				B10C54741A041F7F00A92E62 /* ViewController.h */,
@@ -237,6 +240,7 @@
 			files = (
 				B10C54791A041F7F00A92E62 /* Main.storyboard in Resources */,
 				B10C547E1A041F7F00A92E62 /* LaunchScreen.xib in Resources */,
+				B1C53CB01A070D9B00BEC2E4 /* ele-earth-icon.png in Resources */,
 				B10C547B1A041F7F00A92E62 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

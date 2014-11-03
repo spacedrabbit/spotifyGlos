@@ -207,6 +207,7 @@
                                                         @"MetaDataAlbum" : trackMetaData[@"DIDL-Lite"][@"item"][@"upnp:album"][@"text"],
                                                         @"MetaDataAlbumArtURI" : trackMetaData[@"DIDL-Lite"][@"item"][@"upnp:albumArtURI"][@"text"]
                                                         }];
+                 NSLog(@"Spotify found");
                  
              }
              
@@ -218,6 +219,7 @@
                                                         @"MetaDataAlbum" : @"",
                                                         @"MetaDataAlbumArtURI" : @""
                                                         }];
+                 NSLog(@"TuneIn Radio found");
              }
              
              // HTTP Streaming (?) SoundCloud returns this protocol for me
@@ -228,8 +230,22 @@
                                                         @"MetaDataAlbum" : @"",
                                                         @"MetaDataAlbumArtURI" : trackMetaData[@"DIDL-Lite"][@"item"][@"upnp:albumArtURI"][@"text"]
                                                         }];
+                 NSLog(@"HTTP Stream Foud");
              }
+             //"pandora.com-pndrradio-http:*:audio/mpeg:*"
+             //pandora radio - added by louis 11/2
+             if([trackMetaData[@"DIDL-Lite"][@"item"][@"res"][@"protocolInfo"] isEqualToString:@"pandora.com-pndrradio-http:*:audio/mpeg:*"]) {
+                 [returnData addEntriesFromDictionary:@{
+                                                        @"MetaDataCreator" : trackMetaData[@"DIDL-Lite"][@"item"][@"dc:creator"][@"text"],
+                                                        @"MetaDataTitle" : trackMetaData[@"DIDL-Lite"][@"item"][@"dc:title"][@"text"],
+                                                        @"MetaDataAlbum" : trackMetaData[@"DIDL-Lite"][@"item"][@"upnp:album"][@"text"],
+                                                        @"MetaDataAlbumArtURI" : trackMetaData[@"DIDL-Lite"][@"item"][@"upnp:albumArtURI"][@"text"]
+                                                        }];
+                 NSLog(@"Pandora Stream Found");
+             }
+
          }
+         
          
          
          if(block) block(returnData, nil);

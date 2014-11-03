@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-spotifyGlos-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-spotifyGlos-sonos-objc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>471906629691C200E3FA12B8</key>
+		<key>0AD0FA559B4189414D727E26</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>747B90F78F41F0A2D62A4037</key>
+		<key>2951C5D07D0D6C854C4DA5F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E077B7ADE70E75E6F3648D48</key>
+		<key>5715D22B1490AE05AC8BBB46</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF30CADB390B841419FDCF8F</key>
+		<key>750084FD2AE9BF1A9080719A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EEF9A30E4CA14F5740BC367E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

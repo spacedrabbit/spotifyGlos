@@ -11,19 +11,12 @@
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic) SonosManager *sonosManager;
-@property (strong, nonatomic) SonosController *sonosController;
-@property (strong, nonatomic) SonosDiscover *sonosDiscover;
-
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    self.sonosManager = [SonosManager sharedInstance];
-    
     
     return YES;
 }
