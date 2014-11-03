@@ -18,21 +18,27 @@ PODS:
   - AFNetworking/UIKit (2.0.3):
     - AFNetworking/NSURLConnection
   - CocoaAsyncSocket (HEAD based on 7.3.5)
+  - Expecta (0.2.4)
   - MBProgressHUD (0.9)
   - sonos-objc (0.1.1):
     - AFNetworking (= 2.0.3)
     - CocoaAsyncSocket (= 7.3.3)
+  - Specta (0.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CocoaAsyncSocket (HEAD)
+  - Expecta (~> 0.2.4)
   - MBProgressHUD (~> 0.8)
   - sonos-objc
+  - Specta
 
 SPEC CHECKSUMS:
   AFNetworking: a4d0e9a64de9242986620dafd1b3cee3b413ac5c
   CocoaAsyncSocket: 45bdbbc1c0a5ed0640ff4c42af325ba43a2f099a
+  Expecta: 112bcafa2304ee0f3c5e586505f24555a47b25d5
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   sonos-objc: c7cb1a5e0695c00ad50181db385773ccc815f8bc
+  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
 
 COCOAPODS: 0.34.4

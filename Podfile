@@ -13,6 +13,7 @@ target 'spotifyGlos' do
 end
 
 target 'spotifyGlosTests' do
-
+	pod 'Expecta',     '~> 0.2.4'
+	pod 'Specta'
 end
 

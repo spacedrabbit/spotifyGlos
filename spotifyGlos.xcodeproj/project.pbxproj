@@ -17,7 +17,9 @@
 		B10C54951A044D9D00A92E62 /* JSLSonosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C54941A044D9D00A92E62 /* JSLSonosViewController.m */; };
 		B10C54981A044EB800A92E62 /* UIView+FrameGetters.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C54971A044EB800A92E62 /* UIView+FrameGetters.m */; };
 		B1C53CB01A070D9B00BEC2E4 /* ele-earth-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53CAF1A070D9B00BEC2E4 /* ele-earth-icon.png */; };
+		B1C53CB21A071BAC00BEC2E4 /* JSLSonosViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C53CB11A071BAC00BEC2E4 /* JSLSonosViewControllerSpec.m */; };
 		BD35218FFCB7D1354A2552D8 /* libPods-spotifyGlos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5F2E688A1B134E904E5383 /* libPods-spotifyGlos.a */; };
+		D8F841216F03B78F65602C47 /* libPods-spotifyGlosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC56E6A859120A3D84E57461 /* libPods-spotifyGlosTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +34,10 @@
 
 /* Begin PBXFileReference section */
 		1E5F2E688A1B134E904E5383 /* libPods-spotifyGlos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-spotifyGlos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30A9499FAD4F2B78B9C08B13 /* Pods-spotifyGlosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifyGlosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spotifyGlosTests/Pods-spotifyGlosTests.release.xcconfig"; sourceTree = "<group>"; };
 		77C6430A8419424EDA0BDDDB /* Pods-spotifyGlos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifyGlos.release.xcconfig"; path = "Pods/Target Support Files/Pods-spotifyGlos/Pods-spotifyGlos.release.xcconfig"; sourceTree = "<group>"; };
 		A6A06287EA64436335012A93 /* Pods-spotifyGlos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifyGlos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spotifyGlos/Pods-spotifyGlos.debug.xcconfig"; sourceTree = "<group>"; };
+		AC56E6A859120A3D84E57461 /* libPods-spotifyGlosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-spotifyGlosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10C546A1A041F7F00A92E62 /* spotifyGlos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotifyGlos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10C546E1A041F7F00A92E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B10C546F1A041F7F00A92E62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		B10C54961A044EB800A92E62 /* UIView+FrameGetters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameGetters.h"; sourceTree = "<group>"; };
 		B10C54971A044EB800A92E62 /* UIView+FrameGetters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameGetters.m"; sourceTree = "<group>"; };
 		B1C53CAF1A070D9B00BEC2E4 /* ele-earth-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ele-earth-icon.png"; sourceTree = "<group>"; };
+		B1C53CB11A071BAC00BEC2E4 /* JSLSonosViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLSonosViewControllerSpec.m; sourceTree = "<group>"; };
+		EDA8990839AAB44522ADF5D7 /* Pods-spotifyGlosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifyGlosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spotifyGlosTests/Pods-spotifyGlosTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F841216F03B78F65602C47 /* libPods-spotifyGlosTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				B10C54891A041F7F00A92E62 /* spotifyGlosTests.m */,
+				B1C53CB11A071BAC00BEC2E4 /* JSLSonosViewControllerSpec.m */,
 				B10C54871A041F7F00A92E62 /* Supporting Files */,
 			);
 			path = spotifyGlosTests;
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5F2E688A1B134E904E5383 /* libPods-spotifyGlos.a */,
+				AC56E6A859120A3D84E57461 /* libPods-spotifyGlosTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +161,8 @@
 			children = (
 				A6A06287EA64436335012A93 /* Pods-spotifyGlos.debug.xcconfig */,
 				77C6430A8419424EDA0BDDDB /* Pods-spotifyGlos.release.xcconfig */,
+				EDA8990839AAB44522ADF5D7 /* Pods-spotifyGlosTests.debug.xcconfig */,
+				30A9499FAD4F2B78B9C08B13 /* Pods-spotifyGlosTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -182,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10C54901A041F7F00A92E62 /* Build configuration list for PBXNativeTarget "spotifyGlosTests" */;
 			buildPhases = (
+				E66115B7291D94EAF56A00A1 /* Check Pods Manifest.lock */,
 				B10C547F1A041F7F00A92E62 /* Sources */,
 				B10C54801A041F7F00A92E62 /* Frameworks */,
 				B10C54811A041F7F00A92E62 /* Resources */,
+				2A3F681368DDD2BFB38E7CDF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +268,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A3F681368DDD2BFB38E7CDF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spotifyGlosTests/Pods-spotifyGlosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		964F9FAD4A52CF13B5FB19AB /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +313,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spotifyGlos/Pods-spotifyGlos-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E66115B7291D94EAF56A00A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C53CB21A071BAC00BEC2E4 /* JSLSonosViewControllerSpec.m in Sources */,
 				B10C548A1A041F7F00A92E62 /* spotifyGlosTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +419,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -409,6 +457,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -438,6 +490,7 @@
 		};
 		B10C54911A041F7F00A92E62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA8990839AAB44522ADF5D7 /* Pods-spotifyGlosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -457,6 +510,7 @@
 		};
 		B10C54921A041F7F00A92E62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A9499FAD4F2B78B9C08B13 /* Pods-spotifyGlosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

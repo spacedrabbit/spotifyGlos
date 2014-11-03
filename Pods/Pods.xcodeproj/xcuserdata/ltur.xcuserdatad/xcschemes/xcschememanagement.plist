@@ -29,30 +29,60 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-spotifyGlosTests-Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-spotifyGlosTests-Specta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-spotifyGlosTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0AD0FA559B4189414D727E26</key>
+		<key>1826F29578FA239A15B90C5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2951C5D07D0D6C854C4DA5F5</key>
+		<key>1FD58475C9967343684496C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5715D22B1490AE05AC8BBB46</key>
+		<key>2A292E43B10223963E9BBCD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>750084FD2AE9BF1A9080719A</key>
+		<key>49448E095D8A66ADC54D2A03</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEF9A30E4CA14F5740BC367E</key>
+		<key>69067D2E052AA02598E2DF13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7939C25A4BB1A6BC792A9B05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F7A3F018A868F4956242A20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F64E722FEB0BCFCDB1D8A6E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
