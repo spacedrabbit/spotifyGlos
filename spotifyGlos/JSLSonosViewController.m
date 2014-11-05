@@ -44,6 +44,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [AFURLSessionManager 
+    
     self.songInfo = [[NSMutableDictionary alloc] init];
     self.sonosManager = [SonosManager sharedInstance];
     self.currentDevice = self.sonosManager.currentDevice;
@@ -223,7 +225,7 @@
     self.currentDevice = [[SonosController alloc] initWithIP:@"192.168.2.160" port:1400];
     NSLog(@"%@", [self.currentDevice class]);
 }
-
+    
 //used to get the current song and set it to self.currentsong
 - (IBAction)showCurrentDeviceInfo:(id)sender {
     
