@@ -56,6 +56,24 @@
     // Set Body
     [request setHTTPBody:[post_xml dataUsingEncoding:NSUTF8StringEncoding]];
     
+    //breakpoint tested here
+    /*
+     
+     post_xml evaluates to the following during a trackInfo request:
+     
+    post_xml	NSMutableString *	@"<s:Envelope xmlns:s='http://schemas.xmlsoap.org/soap/envelope/' s:encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'><s:Body><u:GetPositionInfo xmlns:u='urn:schemas-upnp-org:service:AVTransport:1'><InstanceID>0</InstanceID></u:GetPositionInfo></s:Body></s:Envelope>"	0x00007f8059e81ad0
+     >(lldb) po request
+         <NSMutableURLRequest: 0x7f8f50d763f0> { URL: http://192.168.2.160:1400/MediaRenderer/AVTransport/Control, headers: {
+         "Content-Type" = "text/xml";
+         SOAPACTION = "urn:schemas-upnp-org:service:AVTransport:1#GetPositionInfo";
+     >(lldb) po [[request allHTTPHeaderFields] class]
+        __NSCFDictionary
+     >(lldb) po [request allHTTPHeaderFields][@"SOAPACTION"]
+        urn:schemas-upnp-org:service:AVTransport:1#GetPositionInfo
+     } }
+     
+     */
+    
     AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(block) {
@@ -184,6 +202,49 @@
      completion:^(NSDictionary *responseXML, NSError *error) {
          if(error) block(nil, error);
          
+         /* Raw XML, *responseXML for a currently playing track query on a http stream. no fucking clue how to get album data from this.
+          
+          lldb) po responseXML
+          {
+          "s:Envelope" =     {
+          "s:Body" =         {
+          "u:GetPositionInfoResponse" =             {
+          AbsCount =                 {
+          text = 2147483647;
+          };
+          AbsTime =                 {
+          text = "NOT_IMPLEMENTED";
+          };
+          RelCount =                 {
+          text = 2147483647;
+          };
+          RelTime =                 {
+          text = "0:02:15";
+          };
+          Track =                 {
+          text = 2;
+          };
+          TrackDuration =                 {
+          text = "0:03:12";
+          };
+          TrackMetaData =                 {
+          text = "<DIDL-Lite xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:upnp=\"urn:schemas-upnp-org:metadata-1-0/upnp/\" xmlns:r=\"urn:schemas-rinconnetworks-com:metadata-1-0/\" xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\"><item id=\"-1\" parentID=\"-1\" restricted=\"true\"><res protocolInfo=\"sonos.com-http:*:audio/mpeg:*\" duration=\"0:03:12\">x-sonos-http:_dklxfo-EJNiRSC14lH4GC-jkTeE9M7U_9KWY-DmYweS_90-txhjKzdyQIJOU2AR.mp3?sid=151&amp;flags=32</res><r:streamContent></r:streamContent><upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-http%3a_dklxfo-EJNiRSC14lH4GC-jkTeE9M7U_9KWY-DmYweS_90-txhjKzdyQIJOU2AR.mp3%3fsid%3d151%26flags%3d32</upnp:albumArtURI><dc:title>Ghost Mountain</dc:title><upnp:class>object.item.audioItem.musicTrack</upnp:class><dc:creator>The Unicorns</dc:creator><upnp:album>Who Will Cut Our Hair When We&apos;re Gone?</upnp:album></item></DIDL-Lite>";
+          };
+          TrackURI =                 {
+          text = "x-sonos-http:_dklxfo-EJNiRSC14lH4GC-jkTeE9M7U_9KWY-DmYweS_90-txhjKzdyQIJOU2AR.mp3?sid=151&flags=32";
+          };
+          "xmlns:u" = "urn:schemas-upnp-org:service:AVTransport:1";
+          };
+          };
+          "s:encodingStyle" = "http://schemas.xmlsoap.org/soap/encoding/";
+          "xmlns:s" = "http://schemas.xmlsoap.org/soap/envelope/";
+          };
+          }
+        
+          
+          */
+         
+         
          // Create NSDictionary to return, clean up the data Sonos responds
          NSMutableDictionary *returnData = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                             responseXML[@"s:Envelope"][@"s:Body"][@"u:GetPositionInfoResponse"][@"RelTime"][@"text"], @"RelTime",
@@ -197,7 +258,7 @@
          if(responseXML[@"s:Envelope"][@"s:Body"][@"u:GetPositionInfoResponse"][@"TrackMetaData"][@"text"] != nil) {
              NSDictionary *trackMetaData = [XMLReader dictionaryForXMLString:responseXML[@"s:Envelope"][@"s:Body"][@"u:GetPositionInfoResponse"][@"TrackMetaData"][@"text"] error:nil];
              NSLog(@"%@", trackMetaData);
-             
+             //sonos.com-http:*:audio/mpeg:*
              // Figure out what kind of data is playing
              // Spotify:
              if([trackMetaData[@"DIDL-Lite"][@"item"][@"res"][@"protocolInfo"] isEqualToString:@"sonos.com-spotify:*:audio/x-spotify:*"]) {

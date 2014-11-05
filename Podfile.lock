@@ -26,7 +26,7 @@ PODS:
   - Specta (0.2.1)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking
   - CocoaAsyncSocket (HEAD)
   - Expecta (~> 0.2.4)
   - MBProgressHUD (~> 0.8)

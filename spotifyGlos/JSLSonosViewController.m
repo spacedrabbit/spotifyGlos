@@ -37,6 +37,9 @@
 @property (strong, nonatomic) NSArray *devices;
 @property (strong, nonatomic) __block NSMutableDictionary *songInfo;
 
+@property (strong, nonatomic) AFURLSessionManager *sessionManager;
+@property (strong, nonatomic) AFNetworkReachabilityManager * reachabilityManager;
+
 @end
 
 @implementation JSLSonosViewController
@@ -44,7 +47,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [AFURLSessionManager 
+    self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"www.google.com"] sessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    self.reachabilityManager = [AFNetworkReachabilityManager sharedManager];
+    
+    
+    [self.reachabilityManager startMonitoring];
+    
+    [self.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        [NSThread sleepForTimeInterval:2.0];
+        if ( [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi ) {
+            NSLog(@"You're on wifi");
+        }
+        
+    }];
+    
     
     self.songInfo = [[NSMutableDictionary alloc] init];
     self.sonosManager = [SonosManager sharedInstance];

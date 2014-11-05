@@ -76,7 +76,17 @@ typedef void (^findDevicesBlock)(NSArray *ipAddresses);
     if(error) {
         NSLog(@"Error enabling broadcast");
     }
-    
+    /* converted using http://rishida.net/tools/conversion/ -louis 11/4
+     
+     --UTF8--
+     M-SEARCH * HTTP/1.1
+     HOST: 239.255.255.250:1900
+     MAN: &quot;ssdp: discover&quot;
+     MX: 3
+     ST: urn:schemas-upnp-org:device:ZonePlayer:1
+     
+     M-SEARCH * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nMAN: \"ssdp: discover\"\r\nMX: 3\r\nST: urn:schemas-upnp-org:device:ZonePlayer:1\r\n\r\n
+     */
     NSString *str = @"M-SEARCH * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nMAN: \"ssdp: discover\"\r\nMX: 3\r\nST: urn:schemas-upnp-org:device:ZonePlayer:1\r\n\r\n";
     [self.udpSocket sendData:[str dataUsingEncoding:NSUTF8StringEncoding] toHost:@"239.255.255.250" port:1900 withTimeout:-1 tag:0];
     

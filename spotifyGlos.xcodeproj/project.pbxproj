@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10AEE601A09D30600B7AE3F /* sonosConnect.xml in Resources */ = {isa = PBXBuildFile; fileRef = B10AEE5F1A09D30600B7AE3F /* sonosConnect.xml */; };
 		B10C54701A041F7F00A92E62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C546F1A041F7F00A92E62 /* main.m */; };
 		B10C54731A041F7F00A92E62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C54721A041F7F00A92E62 /* AppDelegate.m */; };
 		B10C54761A041F7F00A92E62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C54751A041F7F00A92E62 /* ViewController.m */; };
@@ -38,6 +39,7 @@
 		77C6430A8419424EDA0BDDDB /* Pods-spotifyGlos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifyGlos.release.xcconfig"; path = "Pods/Target Support Files/Pods-spotifyGlos/Pods-spotifyGlos.release.xcconfig"; sourceTree = "<group>"; };
 		A6A06287EA64436335012A93 /* Pods-spotifyGlos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifyGlos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spotifyGlos/Pods-spotifyGlos.debug.xcconfig"; sourceTree = "<group>"; };
 		AC56E6A859120A3D84E57461 /* libPods-spotifyGlosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-spotifyGlosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10AEE5F1A09D30600B7AE3F /* sonosConnect.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sonosConnect.xml; sourceTree = "<group>"; };
 		B10C546A1A041F7F00A92E62 /* spotifyGlos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotifyGlos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10C546E1A041F7F00A92E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B10C546F1A041F7F00A92E62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		B10C546D1A041F7F00A92E62 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B10AEE5F1A09D30600B7AE3F /* sonosConnect.xml */,
 				B10C546E1A041F7F00A92E62 /* Info.plist */,
 				B10C546F1A041F7F00A92E62 /* main.m */,
 			);
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10C54791A041F7F00A92E62 /* Main.storyboard in Resources */,
+				B10AEE601A09D30600B7AE3F /* sonosConnect.xml in Resources */,
 				B10C547E1A041F7F00A92E62 /* LaunchScreen.xib in Resources */,
 				B1C53CB01A070D9B00BEC2E4 /* ele-earth-icon.png in Resources */,
 				B10C547B1A041F7F00A92E62 /* Images.xcassets in Resources */,

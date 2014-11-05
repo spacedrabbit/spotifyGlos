@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F7A3F018A868F4956242A20"
+               BlueprintIdentifier = "34EAEC08E525CA84C891572D"
                BuildableName = "libPods-spotifyGlos-sonos-objc.a"
                BlueprintName = "Pods-spotifyGlos-sonos-objc"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -7,7 +7,7 @@ target 'spotifyGlos' do
 
 	pod 'CocoaAsyncSocket', :head
 	pod 'sonos-objc'
-	pod 'AFNetworking', '~> 2.0'
+	pod 'AFNetworking'
 	pod 'MBProgressHUD', '~> 0.8'
 
 end
